@@ -84,6 +84,32 @@
       font-size: 12px;
     }
   }
+  .footer {
+    &__info {
+      padding: 10px;
+      left: 75%;
+      width: 160px;
+      height: 80px;
+    }
+    &__addr {
+      margin-bottom: 5px;
+      font-size: 14px;
+    }
+    &__phone {
+      font-size: 14px;
+    }
+    &__social {
+      margin-top: 10px;
+    }
+    &__social-item {
+      width: 30px;
+      height: 30px;
+      margin: 0 5px;
+      img {
+        height: 16px;
+      }
+    }
+  }
 }
 
 @media (max-width: 600px) {
