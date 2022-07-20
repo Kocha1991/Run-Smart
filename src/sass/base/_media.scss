@@ -1,3 +1,11 @@
+@media (max-width: 1095px) {
+  .catalog {
+    &__content {
+      justify-content: center;
+      gap: 10px;
+    }
+  }
+}
 @media (max-width: 768px) {
   .header {
     &__logo {
@@ -6,13 +14,13 @@
       }
     }
     &__official {
+      font-size: 10px;
+      span {
         font-size: 10px;
-        span {
-            font-size: 10px;
-        }
+      }
     }
     &__phone {
-        font-size: 14px;
+      font-size: 14px;
     }
   }
 
@@ -52,16 +60,51 @@
   .advantages {
     &__wrapper {
       display: block;
-      
     }
     &__item {
       margin: 0 auto;
-     margin-bottom: 30px;
+      margin-bottom: 30px;
     }
   }
   .consultation {
     &__descr {
       font-size: 16px;
+    }
+  }
+  .carousel {
+    &__inner {
+      width: 100%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .catalog {
+    &__tab {
+      font-size: 12px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .reviews {
+    &__items {
+      display: block;
+      width: 100%;
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+    &__text {
+      width: 100%;
+    }
+    &__header {
+      margin-top: 20px;
+      text-align: center;
+    }
+    &__subheader {
+      text-align: center;
     }
   }
 }
