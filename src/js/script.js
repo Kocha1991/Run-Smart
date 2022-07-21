@@ -50,17 +50,33 @@ $(document).ready(function () {
 
   //modal
 
-  $('[data-modal=consultation]').on('click', function() {
-    $('.overlay, #consultation').fadeIn('slow');
+  $("[data-modal=consultation]").on("click", function () {
+    $(".overlay, #consultation").fadeIn("slow");
   });
-  $('.modal__close').on('click', function() {
-    $('.overlay, #consultation, #thanks, #order').fadeOut('slow');
+  $(".modal__close").on("click", function () {
+    $(".overlay, #consultation, #thanks, #order").fadeOut("slow");
   });
-  $('.button_mini').each(function(i) {
-    $(this).on('click', function() {
-        $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
-        $('.overlay, #order').fadeIn('slow');
+  $(".button_mini").each(function (i) {
+    $(this).on("click", function () {
+      $("#order .modal__descr").text($(".catalog-item__subtitle").eq(i).text());
+      $(".overlay, #order").fadeIn("slow");
     });
   });
-  
+
+  function valideForm(form) {
+    $(form).validate({
+      rules: {
+        name: "required",
+        phone: "required",
+        email: {
+          require: true,
+          email: true,
+        },
+      },
+    });
+  }
+
+  valideForm("#consultation-form");
+  valideForm("#consultation form");
+  valideForm("#order form");
 });
